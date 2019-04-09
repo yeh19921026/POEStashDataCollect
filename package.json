@@ -1,0 +1,27 @@
+{
+  "name": "poedatacollect",
+  "version": "1.0.0",
+  "description": "HTML方面使用pug作為模板語言\r 安裝方法如下\r npm insstall pug\r npm install -g pug-lint",
+  "main": "compilepug.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "pug": "^2.0.3",
+    "pug-lint": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeh19921026/POEStashDataCollect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeh19921026/POEStashDataCollect/issues"
+  },
+  "homepage": "https://github.com/yeh19921026/POEStashDataCollect#readme"
+}
