@@ -4,9 +4,12 @@
 
 安裝好後先執行cmd指向自己的專案
 
-    ex:C:\Project\POEStashDataCollect>
+    e.g. C:\Project\POEStashDataCollect>
 
-然後執行npm install
+然後執行以下指令
+    
+    npm install
+    npm install -g webpack webpack-cli
 
 HTML方面使用pug作為模板引擎
 
