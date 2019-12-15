@@ -10,6 +10,7 @@
     
     npm install
     npm install -g webpack webpack-cli
+    node CompileIndex.ja(編譯初始頁面)
     webpack(編譯react程式碼)
 
 HTML方面使用pug作為模板引擎

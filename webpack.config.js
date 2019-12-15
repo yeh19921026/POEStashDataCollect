@@ -27,9 +27,15 @@ module.exports = {
                 presets: ['@babel/preset-react', '@babel/preset-env']
             },
 
-        }, {
+        },
+        /*{
             test: /\.pug$/,
             use: ['html-loader', 'pug-html-loader']
-        },]
+        },*/
+        {
+            test: /\.pug$/,
+            use: ['babel-loader', 'pug-as-jsx-loader']
+        },
+        ]
     }
 }
