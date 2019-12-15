@@ -612,56 +612,16 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
 var react_dom = __webpack_require__(2);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
-// CONCATENATED MODULE: ./pug/navbar.pug
+// CONCATENATED MODULE: ./src/navbar.pug
 
 /* harmony default export */ var navbar = (function () {
-  return react_default.a.createElement("nav", {
-    className: "navbar navbar-expand-lg navbar-dark fixed-top bg-dark nav-fill",
-    id: "navGroup"
-  }, react_default.a.createElement("button", {
-    className: "navbar-toggler",
-    "data-target": "#navbarCollapse",
-    "data-toggle": "collapse",
-    type: "button",
-    "aria-controls": "navbarCollapse",
-    "aria-expanded": "false",
-    "aria-label": "Toggle navigation"
-  }, react_default.a.createElement("span", {
-    className: "fa fa-bars"
-  })), react_default.a.createElement("button", {
-    className: "navbar-toggler",
-    "data-target": "#searchbarCollapse",
-    "data-toggle": "collapse",
-    type: "button",
-    "aria-controls": "navbarCollapse",
-    "aria-expanded": "false",
-    "aria-label": "Toggle navigation"
-  }, react_default.a.createElement("span", {
-    className: "fa fa-search",
-    "aria-hidden": "true"
-  })), react_default.a.createElement("div", {
-    className: "collapse navbar-collapse text-center",
-    id: "navbarCollapse"
-  }, react_default.a.createElement("a", {
-    className: "navbar-brand ml-lg-0 ml-3",
-    href: "home"
-  }, "POE\u5546\u5E97\u76E3\u807D"), react_default.a.createElement("ul", {
-    className: "navbar-nav",
-    id: "navbar-menu"
-  })), react_default.a.createElement("div", {
-    className: "collapse navbar-collapse",
-    id: "searchbarCollapse"
-  }, react_default.a.createElement("form", {
-    className: "nav-item input-group mt-2 mt-md-0"
-  }), react_default.a.createElement("input", {
-    className: "form-control mr-sm-2",
-    type: "text",
-    "aria-label": "Search",
-    placeholder: "搜尋"
-  }), react_default.a.createElement("button", {
-    className: "btn btn-outline-success my-2 my-sm-0",
-    type: "submit"
-  }, "\u641C\u5C0B`")));
+  return react_default.a.createElement("div", {
+    id: "app"
+  }, react_default.a.createElement("div", {
+    id: "app1"
+  }), react_default.a.createElement("div", {
+    id: "app2"
+  }));
 });
 // CONCATENATED MODULE: ./src/main.jsx
 var _this = undefined;
@@ -674,7 +634,8 @@ var _this = undefined;
 
 var main_MyComponent = function MyComponent() {
   return navbar.call(_this);
-}; // 將 <MyComponent /> 元件插入 id 為 app 的 DOM 元素中
+}; //const MyComponent = () => {return <nav></nav>};
+// 將 <MyComponent /> 元件插入 id 為 app 的 DOM 元素中
 
 
 react_dom_default.a.render(react_default.a.createElement(main_MyComponent, null), document.getElementById('app'));
