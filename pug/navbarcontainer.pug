@@ -1,0 +1,18 @@
+mixin nava(hrf,txt)
+  li.nav-item
+    a.nav-link(href=hrf)=txt
+      block
+mixin navlink(hrf,txt)
+  li.nav-item
+    Link.nav-link(to=hrf)=txt
+      block
+ul#navbar-menu.navbar-nav
+  +navlink('/profile', '個人檔案')
+  +navlink('/searchresult', '歌曲列表')
+  +navlink('/myfavorite', '我的最愛(無)')
+  +navlink('/history', '播放紀錄(無)')
+  +navlink('/playlist', '播放清單')
+  +navlink('/addsong', '新增歌曲')
+  +navlink('/song', '歌曲(暫時)')
+  +navlink('/searchresult', '搜尋結果(暫時)')
+  +nava('#', '登出')

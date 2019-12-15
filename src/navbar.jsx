@@ -3,8 +3,11 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import navbar from '../pug/navbar.pug';      // ← import pug template
+import ncontainer from '../pug/navbarcontainer.pug';      // ← import pug template
+const NavBar = () => navbar.call(this,NavBarContainer);
 
-class NavBar extends React.Component {
+/*class NavBar extends React.Component {
   render() {
     var login = true;
     //vavbar container
@@ -26,57 +29,11 @@ class NavBar extends React.Component {
         input.form-control.mr-sm-2(type='text', aria-label='Search', placeholder='搜尋')
         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') 搜尋`
   }
-}
+}*/
 
-class NavBarLogin extends React.Component {
-  constructor(props) {
-    super(props);
-    this.logout = this.logout.bind(this);
-  }
+class NavBarContainer extends React.Component {
   render() {
-    return pug`
-    mixin nava(hrf, txt)
-      li.nav - item
-      a.nav - link(href = hrf)=txt
-        block
-    mixin navlink(hrf, txt)
-      li.nav - item
-        Link.nav - link(to = hrf)=txt
-          block
-    +navlink('/profile', '個人檔案')
-      if isvarified
-      else
-        span.badge.badge - warning.ml - 1!
-    + navlink('/searchresult', '歌曲列表')
-    + navlink('/myfavorite', '我的最愛(無)')
-    + navlink('/history', '播放紀錄(無)')
-    + navlink('/playlist', '播放清單')
-    + navlink('/addsong', '新增歌曲')
-    + navlink('/song', '歌曲(暫時)')
-    + navlink('/searchresult', '搜尋結果(暫時)')
-    + nava('#', '登出')`
-  }
-}
-
-class NavBarGuest extends React.Component {
-  constructor(props) {
-    super(props);
-    this.authenticate = this.authenticate.bind(this);
-  }
-  render() {
-    //vavbar container
-    return pug`
-    mixin nava(hrf,txt)
-      li.nav-item
-        a.nav-link(href=hrf)= txt
-          block
-    mixin navlink(hrf,txt)
-      li.nav-item
-        Link.nav-link(to=hrf)= txt
-          block
-    li.nav-item
-        a.nav-link(href='#',onClick='{this.authenticate}')登入
-    +navlink('/searchresult', '歌曲列表')`
+    return ncontainer.call(this);
   }
 }
 
